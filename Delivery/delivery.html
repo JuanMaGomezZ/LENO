@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Burgers/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/e2445552bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata&family=Staatliches&display=swap"
         rel="stylesheet">
-        <link rel="icon" href="/assets/more/Perfil.jpg">
-    <title>LENO</title>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/e2445552bb.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/assets/more/perfil.jpg">
+    <title>Pedidos</title>
 </head>
 
 <body>
@@ -27,7 +29,6 @@
                 <a href="/Galeria/galeria.html">Galeria</a>
                 <a href="/Formulario/formulario.html">Trabaja en LENO</a>
                 <i class="fa-solid fa-cart-shopping" id="cart-icon"><span id="contador"></span></i>
-                
             </div>
             <!-- Cart -->
             <div class="cart">
@@ -64,75 +65,28 @@
             <p>Trabajá en LENO</p>
         </a>
     </div>
-    <div class="section-subtitle">
-        <img class="banner" src="/assets/Banners/BannerGrandPaQ.jpg" alt="Banner-Grand-Pa"
-            width="100%">
-        <div class="subtitle">
-            <h2>Burgers</h2>
-            <p>(Todas salen con Papas Fritas)</p>
-        </div>
-    </div>
 
-    <!-- SHOP -->
-    <section class="shop container" id="shop">
-        <div class="paty">
-            <h2 >SIMPLES</h2>
-            <i class='bx bxs-circle'></i>
-        </div>
-        <div id="simples">
-           
-           
 
-        </div>
-        <div class="paty">
-            <h2 >DOBLES</h2>
-            <i class='bx bxs-circle'></i>
-            <i class='bx bxs-circle'></i>
-        </div>
-        <div id="dobles">
-    
-            
-        </div>
-        <div class="paty">
-            <h2 >TRIPLES</h2>
-            <i class='bx bxs-circle'></i>
-            <i class='bx bxs-circle'></i>
-            <i class='bx bxs-circle'></i>
-        </div>            
-        <div id="triples">
-           
-            
-
-        </div>
-
-    </section>
-    <!--  BANNER DESPLAZABLE -->
-    <div class="slider">
-        <ul>
-            <li>
-                <img src="/assets/Banners/Banner-Red.jpg">
-            </li>
-            <li>
-                <img src="/assets/Banners/Banner-Pink.jpg">
-            </li>
-            <li>
-                <img src="/assets/Banners/Banner-American.jpg">
-            </li>
-            <li>
-                <img src="/assets/Banners/Banner-LightBlue.jpg">
-            </li>
-        </ul>
+    <div class="sucursales">
+        <h1>Elegí tu zona</h1>
+        <div class="zona"><a href="/Delivery/Barrio Norte/barrioNorte.html">
+                <h2><i class="fa-solid fa-location-dot"></i>Barrio Norte</h2>
+            </a></div>
+        <div class="zona"><a href="/Delivery/Yerba Buena/yerbaBuena.html">
+                <h2><i class="fa-solid fa-location-dot"></i>Yerba Buena</h2>
+            </a></div>
+        <div class="zona"><a href="/Delivery/Tafi Viejo/tafiViejo.html">
+                <h2><i class="fa-solid fa-location-dot"></i>Tafi Viejo</h2>
+            </a></div>
     </div>
 
 
-
-    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-content-container">
                 <img src="/assets/more/leno-logo-grande.png" class="website-logo">
                 <span class="footer-info">+549 3815 751 992</span>
-                <span class="footer-info">academy@LENO.com</span>
+                <span class="footer-info">example@LENO.com</span>
             </div>
             <div class="footer-menus">
                 <div class="footer-content-container">
@@ -167,8 +121,7 @@
         </div>
     </footer>
 
-
-    <script src="/JavaScript/burgerMenu.js"></script>
+        <script src="/JavaScript/burgerMenu.js"></script>
     <script src="/JavaScript/cart.js"></script>
 </body>
 

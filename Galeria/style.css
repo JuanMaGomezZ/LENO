@@ -78,10 +78,9 @@ header {
 }
 
 .logo {
-  font-size: 5.5rem;
-  color: var(--blanco);
-  font-weight: 600;
-  font-family: "Anton";
+  width: 210px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 #cart-icon {
@@ -341,9 +340,7 @@ footer {
 }
 
 footer .website-logo {
-  margin-bottom: 1.2rem;
-  font-size: 4rem;
-  font-family: "Anton";
+width: 150px;
 }
 
 .footer-info,

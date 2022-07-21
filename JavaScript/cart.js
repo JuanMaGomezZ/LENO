@@ -3,7 +3,7 @@ const burgerSimples = [
     id: 101,
     nombre: "Cheeseburger",
     precio: 700,
-    imagen: "https://i.postimg.cc/8crQ2dVQ/Simple.png",
+    imagen: "/assets/burgers/Simple.png",
     carne: "Medallon 115gr",
     queso: "Cheddar x2",
     topping1: "",
@@ -14,7 +14,7 @@ const burgerSimples = [
     id: 102,
     nombre: "Red Peper",
     precio: 850,
-    imagen: "https://i.postimg.cc/HxnC2DZL/RedPeper.png",
+    imagen: "/assets/burgers/RedPeper.png",
     carne: "Medallon 115gr",
     queso: "Cheddar x2",
     topping1: "Pimiento Asado",
@@ -25,7 +25,7 @@ const burgerSimples = [
     id: 103,
     nombre: "Sleepy Joe",
     precio: 850,
-    imagen: "https://i.postimg.cc/BZ8jSdSs/Sleepy-Joe.png",
+    imagen: "/assets/burgers/SleepyJoe.png",
     carne: "Medallon 115gr",
     queso: "Cheddar x4",
     topping1: "Salsa SleepyJoe",
@@ -39,7 +39,7 @@ const burgerDobles = [
     id: 104,
     nombre: "Big Leno",
     precio: 800,
-    imagen: "https://i.postimg.cc/kgPqdH4j/BigLeno.png",
+    imagen: "/assets/burgers/BigLeno.png",
     carne: "Medallon 90gr x2",
     queso: "Cheddar x2",
     topping1: "Cebolla",
@@ -51,7 +51,7 @@ const burgerDobles = [
     id: 105,
     nombre: "Double Double",
     precio: 800,
-    imagen: "https://i.postimg.cc/J0yM1VZF/Double-Double.png",
+    imagen: "/assets/burgers/DoubleDouble.png",
     carne: "Medallon 90gr x2",
     queso: "Cheddar x2",
     topping1: "Cebolla en rodaja",
@@ -63,7 +63,7 @@ const burgerDobles = [
     id: 106,
     nombre: "Uncle Sam",
     precio: 950,
-    imagen: "https://i.postimg.cc/QVGGhBXB/Uncle-Sam-XL.png",
+    imagen: "/assets/burgers/UncleSamXL.png",
     carne: "Medallon 90gr x2",
     queso: "Cheddar x2",
     topping1: "Bacon",
@@ -75,7 +75,7 @@ const burgerDobles = [
     id: 107,
     nombre: "Oklahoma",
     precio: 800,
-    imagen: "https://i.postimg.cc/nL0JBc15/Oklahoma.png",
+    imagen: "/assets/burgers/Oklahoma.png",
     carne: "Medallon 90gr x2",
     queso: "Cheddar x2",
     topping1: "Cebolla fried",
@@ -87,7 +87,7 @@ const burgerDobles = [
     id: 108,
     nombre: "Leno Mole",
     precio: 950,
-    imagen: "https://i.postimg.cc/28ZrMYzb/LenoMole.png",
+    imagen: "/assets/burgers/LenoMole.png",
     carne: "Medallon 115gr x2",
     queso: "Cheddar x4",
     topping1: "Bacon bits",
@@ -99,7 +99,7 @@ const burgerDobles = [
     id: 109,
     nombre: "Elementary Crispy",
     precio: 950,
-    imagen: "https://i.postimg.cc/9Mgc5FRT/Elementary-Crispy.png",
+    imagen: "/assets/burgers/ElementaryCrispy.png",
     carne: "Medallon 90gr x2",
     queso: "Cheddar x2",
     topping1: "Bacon",
@@ -111,7 +111,7 @@ const burgerDobles = [
     id: 110,
     nombre: "American Burger",
     precio: 1000,
-    imagen: "https://i.postimg.cc/9XScL0jH/American-Burger.png",
+    imagen: "/assets/burgers/AmericanBurger.png",
     carne: "Medallon 90gr x2",
     queso: "Cheddar x4",
     topping1: "Bacon",
@@ -126,7 +126,7 @@ const burgerTriples = [
     id: 111,
     nombre: "Triple Q",
     precio: 800,
-    imagen: "https://i.postimg.cc/KcdRRJjT/TripleQ.png",
+    imagen: "/assets/burgers/TripleQ.png",
     carne: "Medallon 75gr x3 Smashed",
     queso: "Cheddar x3",
     topping1: "Cebolla Brunoise",
@@ -138,7 +138,7 @@ const burgerTriples = [
     id: 112,
     nombre: "345",
     precio: 1000,
-    imagen: "https://i.postimg.cc/nhKZV19n/345.png",
+    imagen: "/assets/burgers/345.png",
     carne: "Medallon 115gr x3",
     queso: "Cheddar x6",
     topping1: "Cebolla Brunoise",
@@ -150,7 +150,7 @@ const burgerTriples = [
     id: 113,
     nombre: "Uncle Sam XL",
     precio: 1100,
-    imagen: "https://i.postimg.cc/QVGGhBXB/Uncle-Sam-XL.png",
+    imagen: "/assets/burgers/UncleSamXL.png",
     carne: "Medallon 90gr x3",
     queso: "Cheddar x6",
     topping1: "Bacon",
@@ -162,7 +162,7 @@ const burgerTriples = [
     id: 114,
     nombre: "Grandpa Sam",
     precio: 1250,
-    imagen: "https://i.postimg.cc/0N8vzJ7D/Grandpa-Sam.png",
+    imagen: "/assets/burgers/GrandpaSam.png",
     carne: "Medallon 90gr x4",
     queso: "Cheddar x8",
     topping1: "Bacon",
@@ -280,7 +280,7 @@ IniciarProductos3();
 function ready() {
   /* REMOVE ITEM */
   let removeCartButtons = document.getElementsByClassName("cart-remove");
-  console.log(removeCartButtons);
+
   for (let i = 0; i < removeCartButtons.length; i++) {
     let button = removeCartButtons[i];
     button.addEventListener("click", removeCartItem);
@@ -308,7 +308,10 @@ function buyButtonClicked() {
   let cartContent = document.getElementsByClassName("cart-content")[0];
   while (cartContent.hasChildNodes()) {
     cartContent.removeChild(cartContent.firstChild);
+ /*  counter.innerText(''); */
   }
+ /*  localStorage.setItem("counter", ""); */
+ 
   updateTotal();
 }
 /* Remove items from cart */
@@ -366,6 +369,7 @@ function addProductToCart(title, price, productImg) {
     .getElementsByClassName("cart-quantity")[0]
     .addEventListener("change", quantityChanged);
 }
+ let counter = 0;
 //Update total
 function updateTotal() {
   let cartContent = document.getElementsByClassName("cart-content")[0];
@@ -379,10 +383,11 @@ function updateTotal() {
     let price = parseFloat(priceElement.innerText.replace("$", ""));
     let quantity = quantityElement.value;
     total += price * quantity;
-    
     counter++;
-    localStorage.setItem("counter",counter);
-    document.getElementById("contador").textContent = localStorage.getItem("counter");
+  
+
+    /* localStorage.setItem("counter",counter); *//* localStorage.getItem("counter") */
+    document.getElementById("contador").textContent = counter;
   }
   /* if price contain some Cents value */
   total = Math.round(total * 100) / 100;
