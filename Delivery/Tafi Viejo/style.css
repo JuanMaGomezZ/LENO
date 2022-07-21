@@ -208,9 +208,8 @@
   .burger-menu {
     margin-top: 9.65rem;
     text-align: center;
-    font-size: 1.5rem;
     line-height: 4.5rem;
-    background-color: rgb(249, 249, 245);
+    background-color: #ffe1c8;
     padding: 10px 0;
     top: -100%;
     z-index: 8;
@@ -221,11 +220,13 @@
   .burger-menu a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 2em;
+    font-size: 2.7em;
+    font-weight: 600;
   }
+
   
   .burger-menu a:hover {
-    font-size: 3.4rem;
+    font-size: 3.1rem;
     color: black;
   }
   /* SUCURSAL */

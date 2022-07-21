@@ -210,18 +210,20 @@
     text-align: center;
     font-size: 1.5rem;
     line-height: 4.5rem;
-    background-color: rgb(249, 249, 245);
-    padding: 10px 0;
+    background-color:#ffe1c8;/* #960f1a */
+    padding: 25px 0;
     top: -100%;
     z-index: 8;
     position: fixed;
     width: 100%;
     transition: 0.7s ease-out;
+    box-shadow: 2px;
   }
   .burger-menu a {
     text-decoration: none;
     color: var(--text-color);
     font-size: 2em;
+    font-weight: 600;
   }
   
   .burger-menu a:hover {

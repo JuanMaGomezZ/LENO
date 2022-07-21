@@ -321,8 +321,8 @@ header {
   margin-top: 9.65rem;
   text-align: center;
   font-size: 2em;
-  line-height: 3.5rem;
-  background-color: rgb(249, 249, 245);
+  line-height: 4.5rem;
+  background-color: #ffe1c8;
   padding: 10px 0;
   top: -100%;
   z-index: 8;
@@ -333,10 +333,13 @@ header {
 .burger-menu a {
   text-decoration: none;
   color: var(--text-color);
+  font-size: 1.4em;
+  font-weight: 600;
 }
 
+
 .burger-menu a:hover {
-  font-size: 2.2rem;
+  font-size: 3.3rem;
   color: black;
 }
 
@@ -453,7 +456,7 @@ footer .website-logo {
 }
 .slider ul {
   display: flex;
-  animation: cambio 20s infinite alternate linear;
+  animation: cambio 15s infinite alternate linear;
   width: 400%;
 }
 .slider li {
@@ -600,4 +603,10 @@ footer .website-logo {
   100% {
     margin-left: -300%;
   }
+}
+
+#contador{
+  position:absolute;
+  margin-left: 5px;
+  font-size: 1.8rem;
 }
