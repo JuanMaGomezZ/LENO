@@ -267,6 +267,7 @@
   .mapa {
     margin-top: 8rem;
     width: 700px;
+    max-width: 100%;
   }
   .direccion{
       margin-top: 8rem;
