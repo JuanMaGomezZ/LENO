@@ -26,7 +26,7 @@
                 <a href="/Delivery/delivery.html">Delivery</a>
                 <a href="/Galeria/galeria.html">Galeria</a>
                 <a href="/Formulario/formulario.html">Trabaja en LENO</a>
-                <i class="fa-solid fa-cart-shopping" id="cart-icon"><span id="contador"></span></i>
+                <i class="fa-solid fa-cart-shopping" id="cart-icon"><span id="contador">0</span></i>
                 
             </div>
             <!-- Cart -->
@@ -74,8 +74,14 @@
     </div>
 
     <!-- SHOP -->
+    <div class="filter">
+        <h3 class="filter-btn" id="filter-all">Mostrar todas</h3>
+        <h3 class="filter-btn" id="filter-simples">Simples <i class='bx bxs-circle'></i></h3>
+        <h3 class="filter-btn" id="filter-dobles">Dobles <i class='bx bxs-circle'></i><i class='bx bxs-circle'></i></h3>
+        <h3 class="filter-btn" id="filter-triples">Triples <i class='bx bxs-circle'></i><i class='bx bxs-circle'></i><i class='bx bxs-circle'></i></h3>
+    </div>
     <section class="shop container" id="shop">
-        <div class="paty">
+        <div class="paty" id="paty-simples">
             <h2 >SIMPLES</h2>
             <i class='bx bxs-circle'></i>
         </div>
@@ -84,16 +90,16 @@
            
 
         </div>
-        <div class="paty">
-            <h2 >DOBLES</h2>
+        <div class="paty" id="paty-dobles">
+            <h2>DOBLES</h2>
             <i class='bx bxs-circle'></i>
             <i class='bx bxs-circle'></i>
         </div>
         <div id="dobles">
-    
+            
             
         </div>
-        <div class="paty">
+        <div class="paty" id="paty-triples">
             <h2 >TRIPLES</h2>
             <i class='bx bxs-circle'></i>
             <i class='bx bxs-circle'></i>
@@ -167,6 +173,7 @@
         </div>
     </footer>
 
+    <script src="/JavaScript/filtro.js"></script>
     <script src="/JavaScript/renderizado.js"></script>
     <script src="/JavaScript/burgerMenu.js"></script>
     <script src="/JavaScript/cart.js"></script>

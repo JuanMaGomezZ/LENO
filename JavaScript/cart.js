@@ -135,14 +135,15 @@ function updateTotal() {
     let quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
     let price = parseFloat(priceElement.innerText.replace("$", ""));
     let quantity = quantityElement.value;
+    
     total += price * quantity;
-    counter++;
-  
-
-    /* localStorage.setItem("counter",counter); *//* localStorage.getItem("counter") */
+    counter += parseInt(quantity);
     document.getElementById("contador").textContent = counter;
   }
-  /* if price contain some Cents value */
+  if (cartBoxes.length === 0) {
+    document.getElementById("contador").textContent = counter;
+  }
+ 
   total = Math.round(total * 100) / 100;
   
 

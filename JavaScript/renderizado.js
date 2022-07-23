@@ -13,7 +13,7 @@ const burgerSimples = [
     {
       id: 102,
       nombre: "Red Peper",
-      precio: 850,
+      precio: 750,
       imagen: "/assets/burgers/RedPeper.png",
       carne: "Medallon 115gr",
       queso: "Cheddar x2",
@@ -24,14 +24,26 @@ const burgerSimples = [
     {
       id: 103,
       nombre: "Sleepy Joe",
-      precio: 850,
+      precio: 750,
       imagen: "/assets/burgers/SleepyJoe.png",
       carne: "Medallon 115gr",
       queso: "Cheddar x4",
       topping1: "Salsa SleepyJoe",
-      topping2: "Mayonesa American Style",
+      topping2: "Mayonesa American",
       topping3: "",
     },
+    {
+      id: 104,
+      nombre: "Classic",
+      precio: 700,
+      imagen: "/assets/burgers/Classic.png",
+      carne: "Medallon 115gr",
+      queso: "Cheddar",
+      topping1: "Tomate",
+      topping2: "Lechuga",
+      topping3: "Salsa LENO",
+    },
+    
   ];
   
   const burgerDobles = [
@@ -119,6 +131,30 @@ const burgerSimples = [
       topping3: "Tomate y Lechuga",
       topping4: "Salsa the American",
     },
+    {
+      id: 110,
+      nombre: "Doble Cheeseburger",
+      precio: 800,
+      imagen: "/assets/burgers/DobleCheeeseBurger.png",
+      carne: "Medallon 90gr x2",
+      queso: "Cheddar x4",
+      topping1: "Ketchup LENO",
+      topping2: "",
+      topping3: "",
+      topping4: "",
+    },
+    {
+      id: 110,
+      nombre: "Doble SleepyJoe",
+      precio: 850,
+      imagen: "/assets/burgers/DobleSleepyJoe.png",
+      carne: "Medallon 90gr x2",
+      queso: "Cheddar x4",
+      topping1: "Salsa SleepyJoe",
+      topping2: "Mayonesa American",
+      topping3: "",
+      topping4: "",
+    },
   ];
   
   const burgerTriples = [
@@ -157,6 +193,18 @@ const burgerSimples = [
       topping2: "Cebolla Brunoise",
       topping3: "Pepinillos",
       topping4: "Salsa LENO",
+    },
+    {
+      id: 113,
+      nombre: "?? ????",
+      precio: 1100,
+      imagen: "/assets/burgers/NoName.png",
+      carne: "????",
+      queso: "????",
+      topping1: "????",
+      topping2: "????",
+      topping3: "",
+      topping4: "",
     },
     {
       id: 114,
