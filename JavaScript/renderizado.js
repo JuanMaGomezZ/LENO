@@ -11,6 +11,17 @@ const burgerSimples = [
       topping3: "",
     },
     {
+      id: 104,
+      nombre: "Classic",
+      precio: 700,
+      imagen: "/assets/burgers/Classic.png",
+      carne: "Medallon 115gr",
+      queso: "Cheddar",
+      topping1: "Tomate",
+      topping2: "Lechuga",
+      topping3: "Salsa LENO",
+    },
+    {
       id: 102,
       nombre: "Red Peper",
       precio: 750,
@@ -32,21 +43,21 @@ const burgerSimples = [
       topping2: "Mayonesa American",
       topping3: "",
     },
-    {
-      id: 104,
-      nombre: "Classic",
-      precio: 700,
-      imagen: "/assets/burgers/Classic.png",
-      carne: "Medallon 115gr",
-      queso: "Cheddar",
-      topping1: "Tomate",
-      topping2: "Lechuga",
-      topping3: "Salsa LENO",
-    },
-    
   ];
   
   const burgerDobles = [
+    {
+      id: 110,
+      nombre: "Doble Cheeseburger",
+      precio: 800,
+      imagen: "/assets/burgers/DobleCheeeseBurger.png",
+      carne: "Medallon 90gr x2",
+      queso: "Cheddar x4",
+      topping1: "Ketchup LENO",
+      topping2: "",
+      topping3: "",
+      topping4: "",
+    },
     {
       id: 104,
       nombre: "Big Leno",
@@ -72,18 +83,6 @@ const burgerSimples = [
       topping4: "Salsa LENO",
     },
     {
-      id: 106,
-      nombre: "Uncle Sam",
-      precio: 950,
-      imagen: "/assets/burgers/UncleSamXL.png",
-      carne: "Medallon 90gr x2",
-      queso: "Cheddar x2",
-      topping1: "Bacon",
-      topping2: "Cebolla",
-      topping3: "Pepinillos",
-      topping4: "Salsa LENO",
-    },
-    {
       id: 107,
       nombre: "Oklahoma",
       precio: 800,
@@ -95,6 +94,31 @@ const burgerSimples = [
       topping3: "Mayonesa American",
       topping4: "",
     },
+    {
+      id: 110,
+      nombre: "Doble Sleepy Joe",
+      precio: 850,
+      imagen: "/assets/burgers/DobleSleepyJoe.png",
+      carne: "Medallon 90gr x2",
+      queso: "Cheddar x4",
+      topping1: "Salsa SleepyJoe",
+      topping2: "Mayonesa American",
+      topping3: "",
+      topping4: "",
+    },
+    {
+      id: 106,
+      nombre: "Uncle Sam",
+      precio: 950,
+      imagen: "/assets/burgers/UncleSamXL.png",
+      carne: "Medallon 90gr x2",
+      queso: "Cheddar x2",
+      topping1: "Bacon",
+      topping2: "Cebolla",
+      topping3: "Pepinillos",
+      topping4: "Salsa LENO",
+    },
+  
     {
       id: 108,
       nombre: "Leno Mole",
@@ -131,30 +155,6 @@ const burgerSimples = [
       topping3: "Tomate y Lechuga",
       topping4: "Salsa the American",
     },
-    {
-      id: 110,
-      nombre: "Doble Cheeseburger",
-      precio: 800,
-      imagen: "/assets/burgers/DobleCheeeseBurger.png",
-      carne: "Medallon 90gr x2",
-      queso: "Cheddar x4",
-      topping1: "Ketchup LENO",
-      topping2: "",
-      topping3: "",
-      topping4: "",
-    },
-    {
-      id: 110,
-      nombre: "Doble SleepyJoe",
-      precio: 850,
-      imagen: "/assets/burgers/DobleSleepyJoe.png",
-      carne: "Medallon 90gr x2",
-      queso: "Cheddar x4",
-      topping1: "Salsa SleepyJoe",
-      topping2: "Mayonesa American",
-      topping3: "",
-      topping4: "",
-    },
   ];
   
   const burgerTriples = [
@@ -186,7 +186,7 @@ const burgerSimples = [
       id: 113,
       nombre: "Uncle Sam XL",
       precio: 1100,
-      imagen: "/assets/burgers/UncleSamXL.png",
+      imagen: "/assets/burgers/UncleSamXL2.png",
       carne: "Medallon 90gr x3",
       queso: "Cheddar x6",
       topping1: "Bacon",
@@ -217,6 +217,22 @@ const burgerSimples = [
       topping2: "Cebolla a la manteca",
       topping3: "Mayonesa con Relish",
       topping4: "Salsa LENO",
+    },
+  ];
+
+  const burgerVeggies = [
+    {
+      id: 101,
+      nombre: "Spicy Veggie",
+      precio: 750,
+      imagen: "/assets/burgers/SpicyVeggie.png",
+      carne: "Medallon de Zanahoria frito crispy",
+      queso: "Cheddar x2",
+      topping1: "Guacamole",
+      topping2: "Cebolla",
+      topping3: "Salsa Criolla",
+      topping4: "Picante",
+      topping5: "Salsa LENO",
     },
   ];
 
@@ -260,6 +276,7 @@ const burgerSimples = [
                               <p class="product-description">${producto.topping1}</p>
                               <p class="product-description">${producto.topping2}</p>
                               <p class="product-description">${producto.topping3}</p>
+                              <p class="product-description">${producto.topping4}</p>
                               <span class="price">$ ${producto.precio}</span>
                               <i class="fa-solid fa-cart-plus add-cart"></i>`;
                               
@@ -291,3 +308,28 @@ const burgerSimples = [
     });
   }
   IniciarProductos3();
+
+  function IniciarProductos4() {
+    let divShop4 = document.createElement("div");
+    divShop4.classList.add("shop-content");  
+    let veggies = document.getElementById("veggies");
+    burgerVeggies.forEach((producto) => {
+     
+      let divProducto4 = document.createElement("div");
+      divProducto4.classList.add("product-box");
+      divProducto4.innerHTML = `<img src="${producto.imagen}" alt="" class="product-img">
+                              <h2 class="product-title">${producto.nombre}</h2>
+                              <p class="product-description">${producto.carne}</p>
+                              <p class="product-description">${producto.queso}</p>
+                              <p class="product-description">${producto.topping1}</p>
+                              <p class="product-description">${producto.topping2}</p>
+                              <p class="product-description">${producto.topping3}</p>
+                              <p class="product-description">${producto.topping4}</p>
+                              <span class="price">$ ${producto.precio}</span>
+                              <i class="fa-solid fa-cart-plus add-cart"></i>`;
+                              
+      divShop4.appendChild(divProducto4);
+      veggies.appendChild(divShop4);
+    });
+  }
+  IniciarProductos4()

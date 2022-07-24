@@ -82,7 +82,7 @@ function quantityChanged(event) {
   }
   updateTotal();
 }
-/* Ad To cart */
+/* Add To cart */
 function addCartClicked(event) {
   let button = event.target;
   let shopProducts = button.parentElement;
@@ -113,7 +113,10 @@ function addProductToCart(title, price, productImg) {
                           </div>
                           <i class='bx bxs-trash-alt cart-remove'></i>
   `;
-  cartShopBox.innerHTML = cartBoxContent;
+  localStorage.setItem('cartBox', cartBoxContent);
+  
+  
+  cartShopBox.innerHTML = localStorage.getItem('cartBox');
   cartItems.append(cartShopBox);
   cartShopBox
     .getElementsByClassName("cart-remove")[0]
@@ -121,6 +124,8 @@ function addProductToCart(title, price, productImg) {
   cartShopBox
     .getElementsByClassName("cart-quantity")[0]
     .addEventListener("change", quantityChanged);
+  
+ 
 }
  let counter = 0;
 //Update total
@@ -145,9 +150,8 @@ function updateTotal() {
   }
  
   total = Math.round(total * 100) / 100;
-  
 
-  
+
 
   document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }

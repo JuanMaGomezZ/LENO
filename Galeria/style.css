@@ -240,7 +240,7 @@ header {
 }
 .slider ul {
   display: flex;
-  animation: cambio 20s infinite alternate linear;
+  animation: cambio 15s infinite alternate linear;
   width: 400%;
 }
 .slider li {
