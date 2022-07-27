@@ -541,24 +541,6 @@ footer .website-logo {
 }
 
 
-
-@media (max-width: 1080px) {
-  .nav {
-    padding: 15px;
-  }
-  .banner {
-    margin-top: 9.65rem;
-  }
-  section {
-    padding: 3rem 0 2rem;
-  }
-  .container {
-    margin: 0 auto;
-    width: 90%;
-    height: auto;
-  }
-}
-
 @media screen and (max-width: 1200px) {
   .nav {
     padding: 11px;
@@ -591,10 +573,33 @@ footer .website-logo {
   }
 }
 
-@media screen and (max-width: 360px) {
-  .cart {
-    width: 280px;
+@media (max-width: 1080px) {
+  .nav {
+    padding: 15px;
   }
+  .banner {
+    margin-top: 9.65rem;
+  }
+  section {
+    padding: 3rem 0 2rem;
+  }
+  .container {
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+  }
+}
+
+
+@media screen and (max-width: 968px) {
+  .shop-content{
+    width: 100%;
+  }
+  .filter i{
+    display: none;
+  }
+
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -639,18 +644,39 @@ footer .website-logo {
   .description .fa-solid {
     display: none;
   }
+  .filter h3{
+    font-size: 2.1rem;
+  }
+  .logo{
+    width: 180px  ;
+  }
+  .burger-menu{
+    margin-top: 9.2rem;
+  }
 
-  /* FILTRO */
- 
 }
 
-@media screen and (max-width: 968px) {
-  .shop-content{
-    width: 100%;
+
+@media screen and (max-width: 360px) {
+  .cart {
+    width: 280px;
   }
-  .filter i{
-    display: none;
+  .logo{
+    width: 130px;
   }
+  .filter h3{
+    font-size: 1.9rem;
+  }
+  .burger-menu{
+    margin-top: 7.8rem;
+  }
+  .burger-menu a{
+    font-size: 2.4rem;
+  }
+  .burger-menu a:hover{
+    font-size: 2.8rem;
+  }
+ 
 }
 
 
