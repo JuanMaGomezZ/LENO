@@ -52,7 +52,6 @@ function ready() {
 /* Buy Button */
 function buyButtonClicked() {
   const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
-  
   if(productos1.length == 0){
     alertEmptyCart();
   }
@@ -67,7 +66,7 @@ function buyButtonClicked() {
   
   localStorage.setItem("counter", "0")
   contador.textContent = JSON.parse(localStorage.getItem("counter"));
-  
+
   let cart = document.querySelector(".cart");
   cart.classList.remove("active");
   let cartContent = document.getElementsByClassName("cart-content")[0];
@@ -150,7 +149,7 @@ function addProductToCart(id, title, price, productImg) {
     .getElementsByClassName("cart-quantity")[0]
     .addEventListener("change", quantityChanged);
 }
-let counter = 0;
+
 //Update total
 function updateTotal() {
   let cartContent = document.getElementsByClassName("cart-content")[0];
@@ -174,6 +173,10 @@ function updateTotal() {
 
   }
   
+  if (cartBoxes.length == 0) {
+    document.getElementById('contador').textContent = counter;
+    localStorage.setItem("coubter", "0");
+}
 
 
   total = Math.round(total * 100) / 100;
