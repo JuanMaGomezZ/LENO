@@ -14,6 +14,16 @@ function alertRepeatedProduct(){
       })
 }
 
+function alertEmptyCart(){
+    Swal.fire({
+        title:'¡No hay nada en el carrito!',
+        text:'Agrega productos para poder comprar',
+        icon:'warning',
+        confirmButtonText: "Ok",
+      })
+}
+
+
 function notiAddCartProduct(){
     Toastify({
         text: "Producto agregado al carro",

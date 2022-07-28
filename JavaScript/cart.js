@@ -15,7 +15,8 @@ section.appendChild(h2);
 /* Maiking Function */
 function ready() {
   /* REMOVE ITEM */
-
+  contador.textContent = JSON.parse(localStorage.getItem("counter"));
+  document.getElementsByClassName("total-price")[0].innerText ="$" + JSON.parse(localStorage.getItem("total"));
   const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
   for (const product of productos1) {
     addProductToCart(
@@ -50,16 +51,23 @@ function ready() {
 }
 /* Buy Button */
 function buyButtonClicked() {
-  alertBuyCart();
   const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
+  
+  if(productos1.length == 0){
+    alertEmptyCart();
+  }
+  else{
+    alertBuyCart();
+  }
   for (let i = productos1.length; i > 0; i--) {
     productos1.pop();
   }
   localStorage.setItem("carrito", JSON.stringify(productos1));
 
-  let contador = document.getElementById("contador");
-  contador.textContent = 0;
-
+  
+  localStorage.setItem("counter", "0")
+  contador.textContent = JSON.parse(localStorage.getItem("counter"));
+  
   let cart = document.querySelector(".cart");
   cart.classList.remove("active");
   let cartContent = document.getElementsByClassName("cart-content")[0];
@@ -158,12 +166,16 @@ function updateTotal() {
 
     total += price * quantity;
 
+
     let contador = document.getElementById("contador");
-    counter = JSON.parse(localStorage.getItem("carrito")).length
+    counter += parseInt(quantity); 
     localStorage.setItem("counter", counter);
     contador.textContent = JSON.parse(localStorage.getItem("counter"));
+
   }
   
+
+
   total = Math.round(total * 100) / 100;
   localStorage.setItem("total", JSON.stringify(total));
   document.getElementsByClassName("total-price")[0].innerText =
