@@ -1,9 +1,5 @@
 /* Cart Working */
-if (document.readyState == "loading") {
-  document.addEventListener("DOMContentLoaded", ready);
-} else {
-  ready();
-}
+document.readyState == 'loading' ? document.addEventListener('DOMContentLoaded', ready) : ready();
 
 let section = document.querySelector("#shop");
 let h2 = document.createElement("h2");
@@ -15,8 +11,18 @@ section.appendChild(h2);
 /* Maiking Function */
 function ready() {
   /* REMOVE ITEM */
+  
+  if (JSON.parse(localStorage.getItem("counter")) == null){
+    localStorage.setItem("counter", "0");
+  }
   contador.textContent = JSON.parse(localStorage.getItem("counter"));
-  document.getElementsByClassName("total-price")[0].innerText ="$" + JSON.parse(localStorage.getItem("total"));
+
+  let DOMTotal = document.getElementsByClassName("total-price")[0];
+  DOMTotal.innerText = "$" + JSON.parse(localStorage.getItem("total"));
+  if (JSON.parse(localStorage.getItem("total")) == null) {
+    DOMTotal.innerText = "$0";
+  }
+
   const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
   for (const product of productos1) {
     addProductToCart(
@@ -52,10 +58,9 @@ function ready() {
 /* Buy Button */
 function buyButtonClicked() {
   const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
-  if(productos1.length == 0){
+  if (productos1.length == 0) {
     alertEmptyCart();
-  }
-  else{
+  } else {
     alertBuyCart();
   }
   for (let i = productos1.length; i > 0; i--) {
@@ -63,8 +68,7 @@ function buyButtonClicked() {
   }
   localStorage.setItem("carrito", JSON.stringify(productos1));
 
-  
-  localStorage.setItem("counter", "0")
+  localStorage.setItem("counter", "0");
   contador.textContent = JSON.parse(localStorage.getItem("counter"));
 
   let cart = document.querySelector(".cart");
@@ -123,7 +127,7 @@ function addProductToCart(id, title, price, productImg) {
   cartShopBox.classList.add("cart-box");
   let cartItems = document.getElementsByClassName("cart-content")[0];
   let cartItemsNames = document.getElementsByClassName("cart-product-title");
-  
+
   for (let i = 0; i < cartItemsNames.length; i++) {
     if (cartItemsNames[i].innerText == title) {
       alertRepeatedProduct();
@@ -165,22 +169,19 @@ function updateTotal() {
 
     total += price * quantity;
 
-
     let contador = document.getElementById("contador");
-    counter += parseInt(quantity); 
+    counter += parseInt(quantity);
     localStorage.setItem("counter", counter);
     contador.textContent = JSON.parse(localStorage.getItem("counter"));
-
   }
-  
+
   if (cartBoxes.length == 0) {
-    document.getElementById('contador').textContent = counter;
-    localStorage.setItem("coubter", "0");
-}
-
-
+    document.getElementById("contador").textContent = counter;
+    localStorage.setItem("counter", "0");
+  }
   total = Math.round(total * 100) / 100;
   localStorage.setItem("total", JSON.stringify(total));
-  document.getElementsByClassName("total-price")[0].innerText =
-    "$" + JSON.parse(localStorage.getItem("total"));
+
+  let DOMTotal = document.getElementsByClassName("total-price")[0];
+  DOMTotal.innerText ="$" + JSON.parse(localStorage.getItem("total"));
 }
