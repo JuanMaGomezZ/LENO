@@ -21,6 +21,7 @@ filterShowAll.onclick = () => {
     simplesContainer.classList.remove("hidden");
     doblesContainer.classList.remove("hidden");
     triplesContainer.classList.remove("hidden");
+    veggiesContainer.classList.remove("hidden");
 
     titleSimples.classList.remove("hidden");
     titleDobles.classList.remove("hidden");
