@@ -117,6 +117,7 @@ function addCartClicked(event) {
     );
     notiAddCartProduct();
   }
+  
   addProductToCart(id, title, price, productImg);
   updateTotal();
 }

@@ -1,3 +1,4 @@
+/* SWEET ALERT */
 function alertBuyCart(){
     Swal.fire({
         title:'Felicitaciones',
@@ -23,7 +24,7 @@ function alertEmptyCart(){
       })
 }
 
-
+/* TOSTIFY */
 function notiAddCartProduct(){
     Toastify({
         text: "Producto agregado al carro",
@@ -35,3 +36,5 @@ function notiAddCartProduct(){
         }
     }).showToast();
 }
+
+/* ANIME JS */

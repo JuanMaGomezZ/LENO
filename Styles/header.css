@@ -1,0 +1,285 @@
+:root {
+    --text-color: #171427;
+    --rojo-leno: #cd060d;
+    --rojo-oscuro: #960f1a;
+    --blanco: whitesmoke;
+    --naranja: #ef8e3d;
+    --hover-claro:rgb(255, 255, 235);
+  
+  }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--rojo-oscuro);
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+    z-index: 10;
+  }
+  .headerSections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+  }
+  .headerSections a {
+    margin-right: 50px;
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: "Staatliches";
+    font-weight: 600;
+  }
+  .headerSections a:hover {
+    transform: scale(1.1, 1.1);
+    color: var(--hover-claro);
+    transition: 0.3s;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    width: 210px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #cart-icon {
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: var(--blanco);
+  }
+  #cart-icon:hover {
+    transform: scale(1.2, 1.2);
+    color: var(--hover-claro);
+    transition: 0.3s;
+  }
+  #contador{
+    position:absolute;
+    margin-left: 5px;
+    font-size: 1.8rem;
+  }
+  /* cart */
+  .cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    padding: 20px;
+    background-color: var(--blanco);
+    box-shadow: -2px 0 4% hsl(0 4% 15% / 10%);
+    transition: 1.2s ease;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .cart.active {
+    right: 0;
+    transition: 0.5s ease;
+  }
+  .cart-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+  .cart-box {
+    display: grid;
+    grid-template-columns: 37% 45% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .cart-img {
+    object-fit: contain;
+    padding: 10px;
+    width: 120px;
+    max-width: 121px;
+  }
+  .detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+  }
+  .cart-product-title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: black;
+  }
+  .cart-price {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  .cart-quantity {
+    border: 1px solid var(--text-color);
+    outline-color: var(--rojo-oscuro);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .cart-remove {
+    font-size: 24px;
+    color: var(--rojo-oscuro);
+    cursor: pointer;
+  }
+  .total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color);
+  }
+  .total-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .total-price {
+    margin-left: 0.5rem;
+    font-size: 1.4rem;
+  }
+  .btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background-color: var(--rojo-oscuro);
+    color: var(--blanco);
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .btn-buy:hover {
+    background-color: var(--text-color);
+    transition: 0.3s;
+  }
+  #close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--text-color);
+  }
+  /* MENU HAMBURGUESA */
+  .container .burger-btn {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--blanco);
+  }
+  .container .cross-btn {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--blanco);
+  }
+  .burger-menu {
+    margin-top: 9.65rem;
+    text-align: center;
+    font-size: 2em;
+    line-height: 4.5rem;
+    background-color: #ffe1c8;
+    padding: 10px 0;
+    top: -100%;
+    z-index: 8;
+    position: fixed;
+    width: 100%;
+    transition: 0.7s ease-out;
+  }
+  .burger-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  .burger-menu a:hover {
+    font-size: 3.3rem;
+    color: black;
+    transition: 0.3s;
+  }
+  
+
+  @media screen and (max-width: 1200px) {
+    .nav {
+      padding: 11px;
+    }
+    .banner {
+      margin-top: 9.65rem;
+    }
+    .logo {
+      font: 1rem;
+    }
+    .cart {
+      width: 320px;
+    }
+    .headerSections a {
+      display: none;
+    }
+    .container .burger-btn {
+      display: block;
+    }
+    .burger-menu.active {
+      top: 0;
+      transition: 0.4s ease-out;
+    }
+    .container .burger-btn.hide {
+      display: none;
+    }
+  
+    #cross-icon.active {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 1080px) {
+    .nav {
+      padding: 15px;
+    }
+    .banner {
+      margin-top: 9.65rem;
+    }
+    section {
+      padding: 3rem 0 2rem;
+    }
+    .container {
+      margin: 0 auto;
+      width: 90%;
+      height: auto;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+  .logo{
+    width: 180px  ;
+  }
+  .burger-menu{
+    margin-top: 9.2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+    .cart {
+      width: 280px;
+    }
+    .logo{
+      width: 130px;
+    }
+    .filter h3{
+      font-size: 1.9rem;
+    }
+    .burger-menu{
+      margin-top: 7.8rem;
+    }
+    .burger-menu a{
+      font-size: 2.4rem;
+    }
+    .burger-menu a:hover{
+      font-size: 2.8rem;
+    }
+   
+  }
