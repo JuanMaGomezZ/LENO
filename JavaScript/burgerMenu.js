@@ -9,6 +9,7 @@ burgerIcon.onclick = () => {
   burgerMenu.classList.add("active");
   burgerIcon.classList.add("hide");
   crossIcon.classList.add("active");
+
 };
 /* Close Menu */
 crossIcon.onclick = () => {
@@ -24,8 +25,10 @@ let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
 
 /* Open Cart*/
+
 cartIcon.onclick = () => {
   cart.classList.add("active");
+
 };
 /* Close Cart */
 closeCart.onclick = () => {

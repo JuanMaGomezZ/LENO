@@ -50,11 +50,7 @@ function ready() {
 }
 /* Buy Button */
 function buyButtonClicked() {
-  Swal.fire({
-    title:'Felicitaciones',
-    text:'¡Tu orden está hecha!',
-    icon:'success'
-  })
+  alertBuyCart();
   const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
   for (let i = productos1.length; i > 0; i--) {
     productos1.pop();
@@ -96,12 +92,10 @@ function quantityChanged(event) {
 function addCartClicked(event) {
   let button = event.target;
   let shopProducts = button.parentElement;
-
   let id = shopProducts.id;
   let title = shopProducts.getElementsByClassName("product-title")[0].innerText;
   let price = shopProducts.getElementsByClassName("price")[0].innerText;
   let productImg = shopProducts.getElementsByClassName("product-img")[0].src;
-
   const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
 
   const existeProducto = productos1.find((producto) => producto.id == id);
@@ -110,6 +104,7 @@ function addCartClicked(event) {
       "carrito",
       JSON.stringify([...productos1, { id, title, price, productImg }])
     );
+    notiAddCartProduct();
   }
   addProductToCart(id, title, price, productImg);
   updateTotal();
@@ -118,18 +113,13 @@ function addCartClicked(event) {
 function addProductToCart(id, title, price, productImg) {
   let cartShopBox = document.createElement("div");
   cartShopBox.setAttribute("id", id);
-
   cartShopBox.classList.add("cart-box");
   let cartItems = document.getElementsByClassName("cart-content")[0];
   let cartItemsNames = document.getElementsByClassName("cart-product-title");
+  
   for (let i = 0; i < cartItemsNames.length; i++) {
     if (cartItemsNames[i].innerText == title) {
-      
-      Swal.fire({
-        title:'¡Ya agregaste este producto en el carro!',
-        text:'Modifica su cantidad dentro del carro',
-        icon:'warning'
-      })
+      alertRepeatedProduct();
       return;
     }
   }
