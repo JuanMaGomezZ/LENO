@@ -81,6 +81,7 @@ function buyButtonClicked() {
 }
 
 function removeCartItem(event) {
+  notiRemoveCartProduct();
   let buttonClicked = event.target;
   buttonClicked.parentElement.remove();
 
