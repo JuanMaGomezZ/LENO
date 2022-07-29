@@ -246,6 +246,11 @@ section {
 }
 
 
+#swal-input4::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
 
 @media screen and (max-width: 968px) {
   .shop-content{
@@ -296,3 +301,10 @@ section {
   }
 }
 
+
+
+
+
+.swal-inputs{
+  width: 90%;
+}
