@@ -11,7 +11,9 @@ section.appendChild(h2);
 /* Maiking Function */
 function ready() {
   /* REMOVE ITEM */
-  
+  let quantityInput = document.getElementsByClassName("cart-quantity");
+  console.log(quantityInput.value);
+ 
   if (JSON.parse(sessionStorage.getItem("counter")) == null){
     sessionStorage.setItem("counter", "0");
   }
@@ -39,7 +41,7 @@ function ready() {
     button.addEventListener("click", removeCartItem);
   }
 
-  let quantityInput = document.getElementsByClassName("cart-quantity");
+  
   for (let i = 0; i < quantityInput.length; i++) {
     let input = quantityInput[i];
     input.addEventListener("change", quantityChanged);
@@ -166,9 +168,10 @@ function updateTotal() {
     let cartBox = cartBoxes[i];
     let priceElement = cartBox.getElementsByClassName("cart-price")[0];
     let quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
+    sessionStorage.setItem("quantityElementSS",JSON.stringify(quantityElement.value));
+    
     let price = parseFloat(priceElement.innerText.replace("$", ""));
-    let quantity = quantityElement.value;
-
+    let quantity = (JSON.parse(sessionStorage.getItem("quantityElementSS")));
     total += price * quantity;
 
     let contador = document.getElementById("contador");

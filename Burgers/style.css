@@ -225,26 +225,50 @@ section {
 
 
 /* BANNER DESPLAZABLE */
-.slider {
-  width: 100%;
-  overflow: hidden;
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
-.slider ul {
-  display: flex;
-  animation: cambio 15s infinite alternate linear;
-  width: 400%;
-}
-.slider li {
-  width: 100%;
-  list-style: none;
-}
-.slider img {
-  width: 100%;
-  height: 100%;
+.containerBanner {
+  position: relative;
+  margin-top: 3%;
 }
 
+.control {
+  list-style: none;
+}
+.control li {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.control li:hover {
+  background: #000;
+}
+.control li.prev {
+  left: 20px;
+}
+.control li.next {
+  right: 20px;
+}
+.tns-nav {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.tns-nav button {
+  height: 18px;
+  width: 18px;
+  background-color: #a5a5a5;
+  border: none;
+  margin-left: 7px;
+  border-radius: 50%;
+}
+.tns-nav .tns-nav-active {
+  background-color: black;
+}
 
 @media screen and (max-width: 968px) {
   .shop-content{
@@ -265,33 +289,4 @@ section {
 }
 
 
-@keyframes cambio {
-  0% {
-    margin-left: 0;
-  }
-  20% {
-    margin-left: 0;
-  }
-
-  25% {
-    margin-left: -100%;
-  }
-  45% {
-    margin-left: -100%;
-  }
-
-  50% {
-    margin-left: -200%;
-  }
-  70% {
-    margin-left: -200%;
-  }
-
-  75% {
-    margin-left: -300%;
-  }
-  100% {
-    margin-left: -300%;
-  }
-}
 
