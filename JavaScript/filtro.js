@@ -1,3 +1,4 @@
+
 let simplesContainer = document.querySelector("#simples");
 let doblesContainer = document.querySelector("#dobles");
 let triplesContainer = document.querySelector("#triples");
@@ -12,10 +13,15 @@ let titleDobles = document.querySelector("#paty-dobles");
 let titleTriples = document.querySelector("#paty-triples");
 let titleVeggies = document.querySelector("#paty-veggies");
 
+let productBoxAOS = document.querySelectorAll(".product-box");
+let DobleCheese = document.getElementById("110");
+
 
 
 filterShowAll.style.color = "#ef8e3d";
 filterShowAll.style.borderBottom = "12px double #960f1a";
+
+
 
 filterShowAll.onclick = () => {
     simplesContainer.classList.remove("hidden");
@@ -48,16 +54,18 @@ filterSimplesBtn.onclick = () => {
     titleVeggies.classList.add("hidden");
     titleSimples.classList.remove("hidden");
     titleSimples.classList.add("under-section");
-
+    
     filterSimplesBtn.style.color = "#ef8e3d";
     filterSimplesBtn.style.borderBottom = "12px double #960f1a";
     filterDoblesBtn.removeAttribute('style');
     filterTriplesBtn.removeAttribute('style');
     filterShowAll.removeAttribute('style');
     filterVeggiesBtn.removeAttribute('style');
+    
 };
 
 filterDoblesBtn.onclick = () => {
+   
     simplesContainer.classList.add("hidden");
     triplesContainer.classList.add("hidden");
     veggiesContainer.classList.add("hidden");
@@ -70,10 +78,12 @@ filterDoblesBtn.onclick = () => {
 
     filterDoblesBtn.style.color = "#ef8e3d";
     filterDoblesBtn.style.borderBottom = "12px double #960f1a";
+    
     filterSimplesBtn.removeAttribute('style');
     filterTriplesBtn.removeAttribute('style');
     filterShowAll.removeAttribute('style');
     filterVeggiesBtn.removeAttribute('style');
+
 };
 
 filterTriplesBtn.onclick = () => {

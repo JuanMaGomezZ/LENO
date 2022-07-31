@@ -14,7 +14,12 @@ function alertBuyCart() {
             allowOutsideClick: false,
             allowEscapeKey: false,
             allowEnterKey: false,
+            showCancelButton: true,
+
             preConfirm: () => {
+              if(document.querySelector('.swal2-cancel').clicked == true){
+                alert("button was clicked");
+             }
               return [
                 document.getElementById("swal-input1").value,
                 document.getElementById("swal-input2").value,
@@ -28,9 +33,9 @@ function alertBuyCart() {
           formPiso = document.getElementById("swal-input3").value;
           formTelefono = document.getElementById("swal-input4").value;
       
-          if (formNombre == "") {
+          if (formNombre == "" || formDireccion == "" ||formTelefono == "" ) {
             Toastify({
-              text: "Error, ingrese su Nombre",
+              text: "Error, Complete todos los campos",
               duration: 4000,
               gravity: "bottom",
               position: "left",
@@ -38,35 +43,15 @@ function alertBuyCart() {
                 background: "#960f1a",
               },
             }).showToast();
-          } else if (formDireccion == "") {
-            Toastify({
-              text: "Error, ingrese su Direccion",
-              duration: 4000,
-              gravity: "bottom",
-              position: "left",
-              style: {
-                background: "#960f1a",
-              },
-            }).showToast();
-          } else if (formTelefono == "") {
-            Toastify({
-              text: "Error, ingrese su Telefono",
-              duration: 4000,
-              gravity: "bottom",
-              position: "left",
-              style: {
-                background: "#960f1a",
-              },
-            }).showToast();
-          }
+          } 
         } while (formNombre == "" || formDireccion == "" || formTelefono == "");
       
         if (1 < 10) {
           class DatosDeEnvio {
             constructor() {
-              this.nombre = formNombre;
-              this.direccion = formDireccion;
-              this.piso = formPiso;
+              this.nombre = formNombre.toUpperCase();
+              this.direccion = formDireccion.toUpperCase();
+              this.piso = formPiso.toUpperCase();
               this.telefono = formTelefono;
             }
           }
@@ -108,7 +93,7 @@ function alertRepeatedProduct() {
 /* TOSTIFY */
 function notiAddCartProduct() {
   Toastify({
-    text: "Producto agregado al carro",
+    text: "Producto agregado al carro 🍔",
     duration: 3000,
     gravity: "bottom",
     position: "left",
@@ -120,7 +105,7 @@ function notiAddCartProduct() {
 
 function notiRemoveCartProduct() {
   Toastify({
-    text: "Producto eliminado del carro",
+    text: "Producto eliminado del carro ❌",
     duration: 3000,
     gravity: "bottom",
     position: "left",

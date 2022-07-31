@@ -1,3 +1,4 @@
+AOS.init();
 const burgerSimples = [
   {
     id: 101,
@@ -251,12 +252,16 @@ const burgerVeggies = [
 
   function IniciarProductos1() {
     let divShop1 = document.createElement("div");
-    divShop1.classList.add("shop-content");  
+    divShop1.classList.add("shop-content");
+    
     let simples = document.getElementById("simples");
     burgerSimples.forEach((producto) => {
      
       let divProducto1 = document.createElement("div");
       divProducto1.classList.add("product-box");
+      divProducto1.setAttribute("data-aos", "fade-up");
+      divProducto1.setAttribute("data-aos-easing","ease-in-out");
+      divProducto1.setAttribute("data-aos-once", "true");
       divProducto1.setAttribute("id", producto.id);
       divProducto1.innerHTML = `<img src="${producto.imagen}" alt="" class="product-img">
                               <h2 class="product-title">${producto.nombre}</h2>
@@ -283,6 +288,10 @@ const burgerVeggies = [
      
       let divProducto2 = document.createElement("div");
       divProducto2.classList.add("product-box");
+      divProducto2.setAttribute("data-aos", "fade-up");
+      divProducto2.setAttribute("data-aos-easing","ease-in-out");
+
+      
       divProducto2.setAttribute("id", producto.id);
       divProducto2.innerHTML = `<img src="${producto.imagen}" alt="" class="product-img">
                               <h2 class="product-title">${producto.nombre}</h2>
@@ -308,6 +317,9 @@ const burgerVeggies = [
     burgerTriples.forEach((producto) => {
       let divProducto3 = document.createElement("div");
       divProducto3.classList.add("product-box");
+      divProducto3.setAttribute("data-aos", "fade-up");
+      divProducto3.setAttribute("data-aos-once", "true");
+      divProducto3.setAttribute("data-aos-easing","ease-in-out");
       divProducto3.setAttribute("id", producto.id);
       divProducto3.innerHTML = `<img src="${producto.imagen}" alt="" class="product-img">
                               <h2 class="product-title">${producto.nombre}</h2>
@@ -333,6 +345,9 @@ const burgerVeggies = [
      
       let divProducto4 = document.createElement("div");
       divProducto4.classList.add("product-box");
+      divProducto4.setAttribute("data-aos", "fade-up");
+      divProducto4.setAttribute("data-aos-once", "true");
+      divProducto4.setAttribute("data-aos-easing","ease-in-out");
       divProducto4.setAttribute("id", producto.id);
       divProducto4.innerHTML = `<img src="${producto.imagen}" alt="" class="product-img">
                               <h2 class="product-title">${producto.nombre}</h2>

@@ -12,18 +12,18 @@ section.appendChild(h2);
 function ready() {
   /* REMOVE ITEM */
   
-  if (JSON.parse(localStorage.getItem("counter")) == null){
-    localStorage.setItem("counter", "0");
+  if (JSON.parse(sessionStorage.getItem("counter")) == null){
+    sessionStorage.setItem("counter", "0");
   }
-  contador.textContent = JSON.parse(localStorage.getItem("counter"));
+  contador.textContent = JSON.parse(sessionStorage.getItem("counter"));
 
   let DOMTotal = document.getElementsByClassName("total-price")[0];
-  DOMTotal.innerText = "$" + JSON.parse(localStorage.getItem("total"));
-  if (JSON.parse(localStorage.getItem("total")) == null) {
+  DOMTotal.innerText = "$" + JSON.parse(sessionStorage.getItem("total"));
+  if (JSON.parse(sessionStorage.getItem("total")) == null) {
     DOMTotal.innerText = "$0";
   }
 
-  const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
+  const productos1 = JSON.parse(sessionStorage.getItem("carrito") || "[]");
   for (const product of productos1) {
     addProductToCart(
       product.id,
@@ -57,7 +57,7 @@ function ready() {
 }
 /* Buy Button */
 function buyButtonClicked() {
-  const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
+  const productos1 = JSON.parse(sessionStorage.getItem("carrito") || "[]");
   if (productos1.length == 0) {
     alertEmptyCart();
   } else {
@@ -66,10 +66,10 @@ function buyButtonClicked() {
   for (let i = productos1.length; i > 0; i--) {
     productos1.pop();
   }
-  localStorage.setItem("carrito", JSON.stringify(productos1));
+  sessionStorage.setItem("carrito", JSON.stringify(productos1));
 
-  localStorage.setItem("counter", "0");
-  contador.textContent = JSON.parse(localStorage.getItem("counter"));
+  sessionStorage.setItem("counter", "0");
+  contador.textContent = JSON.parse(sessionStorage.getItem("counter"));
 
   let cart = document.querySelector(".cart");
   cart.classList.remove("active");
@@ -86,9 +86,9 @@ function removeCartItem(event) {
   buttonClicked.parentElement.remove();
 
   const id = buttonClicked.parentElement.id;
-  const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
+  const productos1 = JSON.parse(sessionStorage.getItem("carrito") || "[]");
   const nuevosProductos = productos1.filter((producto) => producto.id !== id);
-  localStorage.setItem("carrito", JSON.stringify(nuevosProductos));
+  sessionStorage.setItem("carrito", JSON.stringify(nuevosProductos));
 
   updateTotal();
 }
@@ -108,11 +108,11 @@ function addCartClicked(event) {
   let title = shopProducts.getElementsByClassName("product-title")[0].innerText;
   let price = shopProducts.getElementsByClassName("price")[0].innerText;
   let productImg = shopProducts.getElementsByClassName("product-img")[0].src;
-  const productos1 = JSON.parse(localStorage.getItem("carrito") || "[]");
+  const productos1 = JSON.parse(sessionStorage.getItem("carrito") || "[]");
 
   const existeProducto = productos1.find((producto) => producto.id == id);
   if (!existeProducto) {
-    localStorage.setItem(
+    sessionStorage.setItem(
       "carrito",
       JSON.stringify([...productos1, { id, title, price, productImg }])
     );
@@ -145,8 +145,8 @@ function addProductToCart(id, title, price, productImg) {
                           </div>
                           <i class='bx bxs-trash-alt cart-remove'></i>
   `;
-  localStorage.setItem("cartBox", cartBoxContent);
-  cartShopBox.innerHTML = localStorage.getItem("cartBox");
+  sessionStorage.setItem("cartBox", cartBoxContent);
+  cartShopBox.innerHTML = sessionStorage.getItem("cartBox");
   cartItems.append(cartShopBox);
   cartShopBox
     .getElementsByClassName("cart-remove")[0]
@@ -173,17 +173,17 @@ function updateTotal() {
 
     let contador = document.getElementById("contador");
     counter += parseInt(quantity);
-    localStorage.setItem("counter", counter);
-    contador.textContent = JSON.parse(localStorage.getItem("counter"));
+    sessionStorage.setItem("counter", counter);
+    contador.textContent = JSON.parse(sessionStorage.getItem("counter"));
   }
 
   if (cartBoxes.length == 0) {
     document.getElementById("contador").textContent = counter;
-    localStorage.setItem("counter", "0");
+    sessionStorage.setItem("counter", "0");
   }
   total = Math.round(total * 100) / 100;
-  localStorage.setItem("total", JSON.stringify(total));
+  sessionStorage.setItem("total", JSON.stringify(total));
 
   let DOMTotal = document.getElementsByClassName("total-price")[0];
-  DOMTotal.innerText ="$" + JSON.parse(localStorage.getItem("total"));
+  DOMTotal.innerText ="$" + JSON.parse(sessionStorage.getItem("total"));
 }
