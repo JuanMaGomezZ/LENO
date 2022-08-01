@@ -308,6 +308,9 @@ section {
   .banner{
     margin-top: 9.2rem;
   }
+   .subtitle p {
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width: 370px) {
   .banner{
