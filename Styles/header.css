@@ -288,5 +288,7 @@ header {
     .burger-menu a:hover{
       font-size: 2.8rem;
     }
-   
+    .cart-img {
+      max-width: 110px;
+    }
   }
