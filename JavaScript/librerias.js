@@ -127,5 +127,6 @@ let slider = tns({
   autoplay: true,
   autoplayButtonOutput: false,
   controlsContainer: "#custom-control",
+  speed:600,
 });
 
