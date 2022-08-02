@@ -38,10 +38,9 @@ function alertBuyCart() {
           style: {
             background: "#960f1a",
           },
-        }).showToast();
+        });
       }
     } while (formNombre == "" || formDireccion == "" || formTelefono == "");
-
     class DatosDeEnvio {
       constructor() {
         this.nombre = formNombre.toUpperCase();
@@ -52,15 +51,46 @@ function alertBuyCart() {
     }
     let envio = new DatosDeEnvio();
     datosEnvio = sessionStorage.setItem("datosEnvio", JSON.stringify(envio));
+
+    Swal.fire({
+      title: `Tu pedido está en cola ${envio.nombre}`,
+      html: `<p class="ticket">La recibirás en ${envio.direccion}</p>
+             <p class="ticket">El total a pagar es $${sessionStorage.getItem("total")}</p>
+             <p>¿Deseas continuar?</p>`,
+      icon: "question",
+      confirmButtonText: "Ok",
+      confirmButtonColor: "#960f1a",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      allowEnterKey: false,
+      showCancelButton: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        let orderNumber = Math.round(Math.random() * 999999999);
+        Swal.fire({
+          title: "¡Muchas gracias por tu compra!",
+          html: `<p class="ticket">¡Tu orden está hecha!</p>
+                 <p class="ticket">Codigo de pedido: ${orderNumber}</p>`,
+          icon: "success",
+          timer: "10000",
+          timerProgressBar: true,
+          confirmButtonText: "Ok",
+          confirmButtonColor: "#960f1a",
+          allowOutsideClick: false,
+          allowEscapeKey: false,
+          allowEnterKey: false,
+        });
+        cleanCart(); /* Function from cart */
+      }
+    });
   })();
 }
-
 function alertEmptyCart() {
   Swal.fire({
     title: "¡No hay nada en el carrito!",
     text: "Agrega productos para poder comprar",
     icon: "warning",
-    confirmButtonText: 'Continuar',
+    confirmButtonText: "Continuar",
     confirmButtonColor: "#960f1a",
     timer: "2500",
   });
@@ -70,7 +100,7 @@ function alertRepeatedProduct() {
     title: "¡Ya agregaste este producto en el carro!",
     text: "Modifica su cantidad dentro del carro",
     icon: "warning",
-    confirmButtonText: 'Continuar',
+    confirmButtonText: "Continuar",
     confirmButtonColor: "#960f1a",
     timer: "3000",
   });
@@ -88,7 +118,6 @@ function notiAddCartProduct() {
     },
   }).showToast();
 }
-
 function notiRemoveCartProduct() {
   Toastify({
     text: "Producto eliminado del carro ❌",

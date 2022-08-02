@@ -279,7 +279,6 @@ const burgerVeggies = [
   }
   IniciarProductos1();
   
-  
   function IniciarProductos2() {
     let divShop2 = document.createElement("div");
     divShop2.classList.add("shop-content");  

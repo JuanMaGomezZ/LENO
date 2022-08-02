@@ -56,8 +56,8 @@ section {
   margin-top: 8rem;
 }
 
-.container h2 {
-  font-size: 1.5em;
+.container-form h2 {
+  font-size: 1.8em;
 }
 
 .contact-box {
@@ -88,14 +88,14 @@ h2 {
   margin-bottom: 10px;
 }
 
-h2:after {
+.container-form h2:after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
   height: 4px;
-  width: 50px;
+  width: 100px;
   border-radius: 2px;
   background-color: var(--naranja);
 }

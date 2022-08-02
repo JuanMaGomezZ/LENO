@@ -87,6 +87,18 @@ header {
     font-weight: 600;
     margin-top: 2rem;
   }
+/*   .cart-title h2:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    border-radius: 2px;
+    background-color: var(--naranja);
+  } */
+
   .cart-box {
     display: grid;
     grid-template-columns: 37% 45% 18%;
@@ -164,6 +176,9 @@ header {
     font-size: 1.8rem;
     color: var(--text-color);
   }
+  .ticket{
+    font-size: 1.3rem;
+  }
   /* MENU HAMBURGUESA */
   .container .burger-btn {
     display: none;
@@ -208,7 +223,6 @@ header {
     -webkit-appearance: none !important;
     margin: 0 !important;
 }
-
 .fa-truck-fast{
   margin-left: 5px;
 }

@@ -89,9 +89,6 @@ section {
 }
 
 
-
-
-
 @media screen and (min-width: 900px) {
   nav {
     height: 100px;
@@ -127,6 +124,9 @@ section {
     transition: 0.3s;
   }
 }
+
+
+
 
 @media screen and (min-width: 1024px) {
   .sucursales a h2 {
@@ -164,23 +164,6 @@ section {
   .sucursales {
     margin-top: 11.4rem;
     margin-bottom: 3.5rem;
-  }
-  .headerSections a {
-    display: none;
-  }
-  .container .burger-btn {
-    display: block;
-  }
-  .burger-menu.active {
-    top: 0;
-    transition: 0.4s ease-out;
-  }
-  .container .burger-btn.hide {
-    display: none;
-  }
-
-  #cross-icon.active {
-    display: block;
   }
 }
 

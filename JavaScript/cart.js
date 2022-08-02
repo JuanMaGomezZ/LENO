@@ -12,6 +12,8 @@ section.appendChild(h2);
 
 /* Maiking Function */
 function ready() {
+  
+  
   /* REMOVE ITEM */
   let quantityInput = document.getElementsByClassName("cart-quantity");
   console.log(quantityInput.value);
@@ -64,98 +66,8 @@ function buyButtonClicked() {
   if (productos1.length == 0) {
     alertEmptyCart();
   } else {
-    (async () => {
-      do {
-        const { value: datos } = await Swal.fire({
-          title: 'Datos de Envio <i class="fa-solid fa-truck-fast"></i>',
-          html:
-            '<input type="text" id="swal-input1" placeholder="Nombre y Appellido" class="swal2-input">' +
-            '<input type="text" id="swal-input2" placeholder="Direccion" class="swal2-input">' +
-            '<input type="text"id="swal-input3" placeholder="Piso/Departamento" class="swal2-input">' +
-            '<input type="number" id="swal-input4" placeholder="Numero de teléfono" class="swal2-input">',
-          confirmButtonText: "Siguiente",
-          confirmButtonColor: "#960f1a",
-          allowOutsideClick: false,
-          allowEscapeKey: false,
-          allowEnterKey: false,
-
-          preConfirm: () => {
-            return [
-              document.getElementById("swal-input1").value,
-              document.getElementById("swal-input2").value,
-              document.getElementById("swal-input3").value,
-              document.getElementById("swal-input4").value,
-            ];
-          },
-        });
-        formNombre = document.getElementById("swal-input1").value;
-        formDireccion = document.getElementById("swal-input2").value;
-        formPiso = document.getElementById("swal-input3").value;
-        formTelefono = document.getElementById("swal-input4").value;
-
-        if (formNombre == "" || formDireccion == "" || formTelefono == "") {
-          Toastify({
-            text: "Error, Complete todos los campos",
-            duration: 4000,
-            gravity: "bottom",
-            position: "left",
-            style: {
-              background: "#960f1a",
-            },
-          }).showToast();
-        }
-      } while (formNombre == "" || formDireccion == "" || formTelefono == "");
-
-      class DatosDeEnvio {
-        constructor() {
-          this.nombre = formNombre.toUpperCase();
-          this.direccion = formDireccion.toUpperCase();
-          this.piso = formPiso.toUpperCase();
-          this.telefono = formTelefono;
-        }
-      }
-      let envio = new DatosDeEnvio();
-      datosEnvio = sessionStorage.setItem("datosEnvio", JSON.stringify(envio));
-
-      Swal.fire({
-        title: `Tu pedido está en cola ${envio.nombre}`,
-        html: `<p class="ticket">La recibirás en ${envio.direccion}</p>
-               <p class="ticket">El total a pagar es $${sessionStorage.getItem(
-                 "total"
-               )}</p>
-               <p>¿Deseas continuar?</p>`,
-        icon: "success",
-        confirmButtonText: "Ok",
-        confirmButtonColor: "#960f1a",
-        showCancelButton: true,
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire({
-            title: "¡Felicitaciones!",
-            text: "¡Tu orden está hecha!",
-            icon: "success",
-            timer: "3000",
-            timerProgressBar: true,
-            showConfirmButton: false,
-          });
-          /* CLEAN THE CART */
-          for (let i = productos1.length; i > 0; i--) {
-            productos1.pop();
-          }
-          sessionStorage.setItem("carrito", JSON.stringify(productos1));
-          sessionStorage.setItem("counter", "0");
-          contador.textContent = JSON.parse(sessionStorage.getItem("counter"));
-          let cart = document.querySelector(".cart");
-          cart.classList.remove("active");
-          let cartContent = document.getElementsByClassName("cart-content")[0];
-          while (cartContent.hasChildNodes()) {
-            cartContent.removeChild(cartContent.firstChild);
-          }
-          updateTotal();
-        }
-      });
-    })();
-  }
+    alertBuyCart();
+}
 }
 function removeCartItem(event) {
   notiRemoveCartProduct();
@@ -166,7 +78,6 @@ function removeCartItem(event) {
   const productos1 = JSON.parse(sessionStorage.getItem("carrito") || "[]");
   const nuevosProductos = productos1.filter((producto) => producto.id !== id);
   sessionStorage.setItem("carrito", JSON.stringify(nuevosProductos));
-
   updateTotal();
 }
 /* Quantity Changes */
@@ -269,7 +180,10 @@ function updateTotal() {
   DOMTotal.innerText = "$" + JSON.parse(sessionStorage.getItem("total"));
 }
 
+
+/* CLEANING THE CART */
 function cleanCart() {
+  const productos1 = JSON.parse(sessionStorage.getItem("carrito") || "[]");
   for (let i = productos1.length; i > 0; i--) {
     productos1.pop();
   }
@@ -284,3 +198,6 @@ function cleanCart() {
   }
   updateTotal();
 }
+
+
+/* Number order */

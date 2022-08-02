@@ -13,11 +13,6 @@ let titleDobles = document.querySelector("#paty-dobles");
 let titleTriples = document.querySelector("#paty-triples");
 let titleVeggies = document.querySelector("#paty-veggies");
 
-let productBoxAOS = document.querySelectorAll(".product-box");
-let DobleCheese = document.getElementById("110");
-
-
-
 filterShowAll.style.color = "#ef8e3d";
 filterShowAll.style.borderBottom = "12px double #960f1a";
 
