@@ -1,0 +1,62 @@
+[
+    {
+      "id": 120,
+      "nombre": "Triple Q",
+      "precio": 800,
+      "imagen": "/assets/burgers/TripleQ.png",
+      "carne": "Medallon 75gr x3 Smashed",
+      "queso": "Cheddar x3",
+      "topping1": "Cebolla Brunoise",
+      "topping2": "Ketchup LENO",
+      "topping3": "",
+      "topping4": ""
+    },
+    {
+      "id": 121,
+      "nombre": "345",
+      "precio": 1000,
+      "imagen": "/assets/burgers/345.png",
+      "carne": "Medallon 115gr x3",
+      "queso": "Cheddar x6",
+      "topping1": "Cebolla Brunoise",
+      "topping2": "Pepinillos",
+      "topping3": "Ketchup LENO",
+      "topping4": ""
+    },
+    {
+      "id": 122,
+      "nombre": "Uncle Sam XL",
+      "precio": 1100,
+      "imagen": "/assets/burgers/UncleSamXL2.png",
+      "carne": "Medallon 90gr x3",
+      "queso": "Cheddar x6",
+      "topping1": "Bacon",
+      "topping2": "Cebolla Brunoise",
+      "topping3": "Pepinillos",
+      "topping4": "Salsa LENO"
+    },
+    {
+      "id": 123,
+      "nombre": "?? ????",
+      "precio": 1100,
+      "imagen": "/assets/burgers/NoName.png",
+      "carne": "????",
+      "queso": "????",
+      "topping1": "????",
+      "topping2": "????",
+      "topping3": "",
+      "topping4": ""
+    },
+    {
+      "id": 124,
+      "nombre": "Grandpa Sam",
+      "precio": 1250,
+      "imagen": "/assets/burgers/GrandpaSam.png",
+      "carne": "Medallon 90gr x4",
+      "queso": "Cheddar x8",
+      "topping1": "Bacon",
+      "topping2": "Cebolla a la manteca",
+      "topping3": "Mayonesa con Relish",
+      "topping4": "Salsa LENO"
+    }
+  ]

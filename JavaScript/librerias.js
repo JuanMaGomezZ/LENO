@@ -80,7 +80,7 @@ function alertBuyCart() {
           allowEscapeKey: false,
           allowEnterKey: false,
         });
-        cleanCart(); /* Function from cart */
+        cleanCart(); 
       }
     });
   })();

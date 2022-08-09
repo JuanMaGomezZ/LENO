@@ -9,7 +9,6 @@ burgerIcon.onclick = () => {
   burgerMenu.classList.add("active");
   burgerIcon.classList.add("hide");
   crossIcon.classList.add("active");
-
 };
 /* Close Menu */
 crossIcon.onclick = () => {

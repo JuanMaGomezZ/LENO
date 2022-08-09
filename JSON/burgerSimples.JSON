@@ -1,0 +1,46 @@
+[
+    {
+      "id": 101,
+      "nombre": "Cheeseburger",
+      "precio": 700,
+      "imagen": "/assets/burgers/Simple.png",
+      "carne": "Medallon 115gr",
+      "queso": "Cheddar x2",
+      "topping1": "",
+      "topping2": "",
+      "topping3": ""
+    },
+    {
+      "id": 102,
+      "nombre": "Classic",
+      "precio": 700,
+      "imagen": "/assets/burgers/Classic.png",
+      "carne": "Medallon 115gr",
+      "queso": "Cheddar",
+      "topping1": "Tomate",
+      "topping2": "Lechuga",
+      "topping3": "Salsa LENO"
+    },
+    {
+      "id": 103,
+      "nombre": "Red Peper",
+      "precio": 750,
+      "imagen": "/assets/burgers/RedPeper.png",
+      "carne": "Medallon 115gr",
+      "queso": "Cheddar x2",
+      "topping1": "Pimiento Asado",
+      "topping2": "Cebolla",
+      "topping3": "Ketchup y Mostaza"
+    },
+    {
+      "id": 104,
+      "nombre": "Sleepy Joe",
+      "precio": 750,
+      "imagen": "/assets/burgers/SleepyJoe.png",
+      "carne": "Medallon 115gr",
+      "queso": "Cheddar x4",
+      "topping1": "Salsa SleepyJoe",
+      "topping2": "Mayonesa American",
+      "topping3": ""
+    }
+  ]

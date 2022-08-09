@@ -1,0 +1,28 @@
+[
+    {
+      "id": 131,
+      "nombre": "Spicy Veggie",
+      "precio": 750,
+      "imagen": "/assets/burgers/SpicyVeggie.png",
+      "carne": "Medallon de Zanahoria frito crispy",
+      "queso": "Cheddar x2",
+      "topping1": "Guacamole",
+      "topping2": "Cebolla",
+      "topping3": "Salsa Criolla",
+      "topping4": "Picante",
+      "topping5": "Salsa LENO"
+    },
+    {
+      "id": 132,
+      "nombre": "Crispy Veggie",
+      "precio": 750,
+      "imagen": "/assets/burgers/CrispyVeggie.png",
+      "carne": "Medallon de Zanahoria frito crispy",
+      "queso": "Cheddar x2",
+      "topping1": "Cebolla Crispy",
+      "topping2": "Pimientos ahumados",
+      "topping3": "Salsa Criolla",
+      "topping4": "Salsa Alioli",
+      "topping5": ""
+    }
+  ]

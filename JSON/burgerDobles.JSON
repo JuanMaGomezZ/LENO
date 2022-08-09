@@ -1,0 +1,113 @@
+[
+    {
+      "id": 110,
+      "nombre": "Doble Cheeseburger",
+      "precio": 800,
+      "imagen": "/assets/burgers/DobleCheeeseBurger.png",
+      "carne": "Medallon 90gr x2",
+      "queso": "Cheddar x4",
+      "topping1": "Ketchup LENO",
+      "topping2": "",
+      "topping3": "",
+      "topping4": ""
+    },
+    {
+      "id": 111,
+      "nombre": "Big Leno",
+      "precio": 800,
+      "imagen": "/assets/burgers/BigLeno.png",
+      "carne": "Medallon 90gr x2",
+      "queso": "Cheddar x2",
+      "topping1": "Cebolla",
+      "topping2": "Lechuga",
+      "topping3": "Pepinillos",
+      "topping4": "Salsa Big LENO"
+    },
+    {
+      "id": 112,
+      "nombre": "Double Double",
+      "precio": 800,
+      "imagen": "/assets/burgers/DoubleDouble.png",
+      "carne": "Medallon 90gr x2",
+      "queso": "Cheddar x2",
+      "topping1": "Cebolla en rodaja",
+      "topping2": "Tomate",
+      "topping3": "Lechuga",
+      "topping4": "Salsa LENO"
+    },
+    {
+      "id": 113,
+      "nombre": "Oklahoma",
+      "precio": 800,
+      "imagen": "/assets/burgers/Oklahoma.png",
+      "carne": "Medallon 90gr x2",
+      "queso": "Cheddar x2",
+      "topping1": "Cebolla fried",
+      "topping2": "Pepinillos",
+      "topping3": "Mayonesa American",
+      "topping4": ""
+    },
+    {
+      "id": 114,
+      "nombre": "Doble Sleepy Joe",
+      "precio": 850,
+      "imagen": "/assets/burgers/DobleSleepyJoe.png",
+      "carne": "Medallon 90gr x2",
+      "queso": "Cheddar x4",
+      "topping1": "Salsa SleepyJoe",
+      "topping2": "Mayonesa American",
+      "topping3": "",
+      "topping4": ""
+    },
+    {
+      "id": 115,
+      "nombre": "Uncle Sam",
+      "precio": 950,
+      "imagen": "/assets/burgers/UncleSamXL.png",
+      "carne": "Medallon 90gr x2",
+      "queso": "Cheddar x2",
+      "topping1": "Bacon",
+      "topping2": "Cebolla",
+      "topping3": "Pepinillos",
+      "topping4": "Salsa LENO"
+    },
+  
+    {
+      "id": 116,
+      "nombre": "Leno Mole",
+      "precio": 950,
+      "imagen": "/assets/burgers/LenoMole.png",
+      "carne": "Medallon 115gr x2",
+      "queso": "Cheddar x4",
+      "topping1": "Bacon bits",
+      "topping2": "Guacamole",
+      "topping3": "Lechuga",
+      "topping4": "Mayonesa HOT"
+    },
+    {
+      "id": 117,
+      "nombre": "Elementary Crispy",
+      "precio": 950,
+      "imagen": "/assets/burgers/ElementaryCrispy.png",
+      "carne": "Medallon 90gr x2",
+      "queso": "Cheddar x2",
+      "topping1": "Bacon",
+      "topping2": "Cebolla crispy",
+      "topping3": "Salsa Barbacoa",
+      "topping4": ""
+    },
+    {
+      "id": 118,
+      "nombre": "American Burger",
+      "precio": 1000,
+      "imagen": "/assets/burgers/AmericanBurger.png",
+      "carne": "Medallon 90gr x2",
+      "queso": "Cheddar x4",
+      "topping1": "Bacon",
+      "topping2": "Cebolla",
+      "topping3": "Tomate y Lechuga",
+      "topping4": "Salsa the American"
+    }
+  ]
+
+  
