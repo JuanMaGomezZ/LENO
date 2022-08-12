@@ -5,7 +5,6 @@ fetch("/JSON/burgerSimples.JSON")
 document.readyState == "loading"
   ? document.addEventListener("DOMContentLoaded", ready)
   : ready();
-
 let section = document.querySelector("#shop");
 let h2 = document.createElement("h2");
 h2.classList.add("section-title");
